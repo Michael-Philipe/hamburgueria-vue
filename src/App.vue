@@ -2,10 +2,10 @@
   
   <Header :showProducts="showProducts" :price="cartTotal"/>
   <main>
-    
+    <!-- se nao tiver nada no container chamar um componente de stock vazio -->
     <Hamburguers :data="products" :addCart="addCart" :filteredProducts="filteredProducts" :valor="valor"/>
    
-    
+    <!-- se nao tiver nada no container chamar um componente de carrinho vazio -->
     <Carrinho :data="currentSale" :price="cartTotal" :removeItemFromCart="removeItemFromCart"/>
   </main>
 </template>
