@@ -4,8 +4,9 @@
       <h1>Logo</h1>
       <div class="input-container">
         <label for="">Pesquisar burger</label>
-        <input type="text">
+        <input type="text" v-model="text" @input="showProducts(text)">
       </div>
+      
     </nav>
   </header>
 </template>
@@ -17,7 +18,16 @@ export default {
 </script>
 
 <script setup>
+import { onMounted, ref, watch } from 'vue';
 
+
+const text = ref('')
+
+
+defineProps({
+  showProducts: Function,
+  price: Number
+})
   
 
 </script>
